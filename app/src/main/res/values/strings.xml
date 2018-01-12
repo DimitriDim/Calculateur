@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Calculateur</string>
+    <string name="btnEffacer">Effacer</string>
+    <string name="btnResult">Résultat</string>
+</resources>

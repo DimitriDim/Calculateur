@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="fr.m2i.calculateur.MainActivity">
+
+    <TextView
+        android:id="@+id/txtAffichage"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff0e0e0e"
+        android:text=""
+        android:textAlignment="viewEnd"
+        android:textColor="#ffffffff"
+        android:textSize="30dp" />
+
+    <RadioGroup
+        android:id="@+id/grpRadBtnDevises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10px">
+
+        <RadioButton
+            android:id="@+id/rbEur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:onClick="convDevise"
+            android:text="€" />
+
+        <RadioButton
+            android:id="@+id/rbUSD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:onClick="convDevise"
+            android:text="$" />
+
+        <RadioButton
+            android:id="@+id/rbLivres"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:onClick="convDevise"
+            android:text="£" />
+
+        <RadioButton
+            android:id="@+id/rdBTC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:onClick="convDevise"
+            android:text="฿" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/grpRadBtnDeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:padding="10px">
+
+        <RadioButton
+            android:id="@+id/rbDeg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:onClick="convDeg"
+            android:text="Deg" />
+
+        <RadioButton
+            android:id="@+id/rbRad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:onClick="convDeg"
+            android:text="Rad" />
+
+        <RadioButton
+            android:id="@+id/rbGrd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:onClick="convDeg"
+            android:text="Grd" />
+
+    </RadioGroup>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:columnCount="4">
+
+        <Button
+            android:id="@+id/btnEffacer"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_row="0"
+            android:onClick="btnEffacer"
+            android:text="@string/btnEffacer" />
+
+
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/touche"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:onClick="touche"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/touche"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="touche"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/touche"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:onClick="touche"
+
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/touche"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:onClick="touche"
+
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnMultip"
+
+            style="@style/touche"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:onClick="touche"
+            android:text="*" />
+
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/touche"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:onClick="touche"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/touche"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:onClick="touche"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/touche"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:onClick="touche"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnMoins"
+            style="@style/touche"
+            android:layout_column="3"
+            android:layout_row="2"
+            android:onClick="touche"
+            android:text="-" />
+
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/touche"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:onClick="touche"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/touche"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:onClick="touche"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/touche"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:onClick="touche"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/touche"
+            android:layout_column="3"
+            android:layout_row="3"
+            android:onClick="touche"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/touche"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:onClick="touche"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnPoint"
+            style="@style/touche"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:onClick="touche"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btnResult"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_column="2"
+            android:layout_columnSpan="2"
+            android:layout_row="4"
+            android:onClick="result"
+            android:text="@string/btnResult" />
+
+
+    </GridLayout>
+
+
+</LinearLayout>
